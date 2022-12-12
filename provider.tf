@@ -9,11 +9,11 @@ terraform {
 provider "aws" {
   alias   = "source"
   region  = "eu-west-1"
-  profile = "PrachiAWS"
+  # profile = "PrachiAWS"
 }
 provider "aws" {
   alias   = "central"
   region  = "eu-central-1"
-  profile = "PrachiAWS"
+  # profile = "PrachiAWS"
 }
  
