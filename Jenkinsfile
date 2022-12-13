@@ -20,14 +20,14 @@ pipeline{
                 }
             }
         }
-        stage('Terraform Plan'){
+        stage('Terraform Validate'){
             steps{
                 withCredentials([[
                 $class: 'AmazonWebServicesCredentialsBinding',
                 credentialsId: '954077833971',
                 accessKeyVariable: 'AWS_ACCESS_KEY_ID',
                 secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']])  {
-                    sh 'terraform plan'
+                    sh 'terraform validate'
                 }
             }
         }
